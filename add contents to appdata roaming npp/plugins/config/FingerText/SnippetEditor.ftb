@@ -1,0 +1,8 @@
+------ FingerText Snippet Editor View ------
+for
+Ext:js
+for (var $[![i]!] = 0; $[![i]!] < $[![length]!]; $[![i]!]++)
+{
+	$[![]!]
+}
+[>END<]

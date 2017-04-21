@@ -1,0 +1,50 @@
+<NotepadPlus>
+    <InternalCommands>
+        <Shortcut id="44029" Ctrl="no" Alt="no" Shift="no" Key="0" />
+        <Shortcut id="44010" Ctrl="no" Alt="no" Shift="no" Key="0" />
+        <Shortcut id="50005" Ctrl="yes" Alt="no" Shift="yes" Key="77" />
+        <Shortcut id="42012" Ctrl="yes" Alt="no" Shift="yes" Key="74" />
+        <Shortcut id="42034" Ctrl="yes" Alt="yes" Shift="no" Key="67" />
+        <Shortcut id="44034" Ctrl="yes" Alt="no" Shift="yes" Key="65" />
+        <Shortcut id="41017" Ctrl="no" Alt="no" Shift="no" Key="113" />
+        <Shortcut id="43006" Ctrl="yes" Alt="no" Shift="yes" Key="113" />
+    </InternalCommands>
+    <Macros />
+    <UserDefinedCommands>
+        <Command name="Launch in Chrome" Ctrl="yes" Alt="no" Shift="yes" Key="82">chrome &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+        <Command name="Launch in Firefox" Ctrl="yes" Alt="yes" Shift="yes" Key="88">firefox &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+        <Command name="Launch in IE" Ctrl="yes" Alt="yes" Shift="yes" Key="73">iexplore &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+        <Command name="Launch in Safari" Ctrl="yes" Alt="yes" Shift="yes" Key="70">safari &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+        <Command name="Test Crossbroswer" Ctrl="yes" Alt="no" Shift="yes" Key="66">$(NPP_DIRECTORY)\crossbrowser.bat &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+        <Command name="Open in Localhost" Ctrl="yes" Alt="no" Shift="yes" Key="76">$(NPP_DIRECTORY)\localhost.bat &quot;$(FULL_CURRENT_PATH)&quot;</Command>
+        <Command name="Google Search" Ctrl="yes" Alt="no" Shift="no" Key="84">https://www.google.com/search?q=$(CURRENT_WORD)</Command>
+        <Command name='Google &quot;I&apos;m feeling Lucky&quot;' Ctrl="yes" Alt="no" Shift="yes" Key="71">http://www.google.com/search?btnI=I&apos;m+Feeling+Lucky&amp;q=$(CURRENT_WORD)</Command>
+        <Command name="Wikipedia Search" Ctrl="yes" Alt="no" Shift="yes" Key="87">https://en.wikipedia.org/wiki/Special:Search?search=$(CURRENT_WORD)</Command>
+        <Command name="Get php help" Ctrl="no" Alt="yes" Shift="no" Key="112">http://www.php.net/$(CURRENT_WORD)</Command>
+    </UserDefinedCommands>
+    <PluginCommands>
+        <PluginCommand moduleName="EmmetNPP.dll" internalID="0" Ctrl="yes" Alt="no" Shift="no" Key="69" />
+        <PluginCommand moduleName="EmmetNPP.dll" internalID="1" Ctrl="yes" Alt="no" Shift="yes" Key="69" />
+        <PluginCommand moduleName="DoxyIt.dll" internalID="0" Ctrl="yes" Alt="no" Shift="yes" Key="68" />
+        <PluginCommand moduleName="Explorer.dll" internalID="0" Ctrl="yes" Alt="no" Shift="yes" Key="79" />
+        <PluginCommand moduleName="NppCCompletionPlugin.dll" internalID="6" Ctrl="no" Alt="no" Shift="no" Key="0" />
+        <PluginCommand moduleName="NppConverter.dll" internalID="0" Ctrl="yes" Alt="no" Shift="yes" Key="72" />
+        <PluginCommand moduleName="NppCCompletionPlugin.dll" internalID="1" Ctrl="yes" Alt="no" Shift="yes" Key="67" />
+        <PluginCommand moduleName="FingerText.dll" internalID="3" Ctrl="no" Alt="no" Shift="no" Key="0" />
+        <PluginCommand moduleName="NppFTP.dll" internalID="0" Ctrl="yes" Alt="no" Shift="yes" Key="88" />
+        <PluginCommand moduleName="FingerText.dll" internalID="2" Ctrl="yes" Alt="no" Shift="yes" Key="86" />
+        <PluginCommand moduleName="NppCCompletionPlugin.dll" internalID="2" Ctrl="yes" Alt="no" Shift="no" Key="73" />
+        <PluginCommand moduleName="NppCCompletionPlugin.dll" internalID="3" Ctrl="no" Alt="no" Shift="no" Key="0" />
+        <PluginCommand moduleName="NppCCompletionPlugin.dll" internalID="7" Ctrl="yes" Alt="no" Shift="yes" Key="73" />
+        <PluginCommand moduleName="NppCCompletionPlugin.dll" internalID="11" Ctrl="no" Alt="no" Shift="no" Key="0" />
+        <PluginCommand moduleName="NppCCompletionPlugin.dll" internalID="12" Ctrl="no" Alt="no" Shift="no" Key="0" />
+        <PluginCommand moduleName="NppCCompletionPlugin.dll" internalID="14" Ctrl="no" Alt="no" Shift="no" Key="0" />
+        <PluginCommand moduleName="NppCCompletionPlugin.dll" internalID="13" Ctrl="no" Alt="no" Shift="no" Key="0" />
+        <PluginCommand moduleName="NppCCompletionPlugin.dll" internalID="10" Ctrl="no" Alt="no" Shift="no" Key="0" />
+        <PluginCommand moduleName="NppCCompletionPlugin.dll" internalID="9" Ctrl="no" Alt="no" Shift="no" Key="0" />
+        <PluginCommand moduleName="NppCCompletionPlugin.dll" internalID="8" Ctrl="no" Alt="no" Shift="no" Key="0" />
+        <PluginCommand moduleName="NppCCompletionPlugin.dll" internalID="5" Ctrl="no" Alt="no" Shift="no" Key="0" />
+        <PluginCommand moduleName="NppCCompletionPlugin.dll" internalID="4" Ctrl="no" Alt="no" Shift="no" Key="0" />
+    </PluginCommands>
+    <ScintillaKeys />
+</NotepadPlus>

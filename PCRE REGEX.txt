@@ -1,0 +1,9 @@
+PCRE REGEX
+
+ADDING CONSOLE.LOG AFTER EVERY FUNCTION (USEFUL FOR DEBUGGING)
+FROM: function(\s*)(\S+)\((.*)\)(\s*){
+TO: function $1\($2\)\n{\n\tconsole.log\(\"You entered function $1\!"\);
+
+REMOVING CONSOLE.LOGS
+FROM: console\.log\((.*)\);
+TO: (literally nothing)
