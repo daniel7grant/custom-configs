@@ -1,9 +1,14 @@
 #!/bin/sh
 # Bash to-do list
 
+#Copy necessary files
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cp -a $DIR/. ~
+
 # Vim settings
 ## First, download the Vundle library
-# ...
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+vim -c ":PluginInstall"
 
 # Fun with cat facts -- Ubuntu only
 ## Disable all other MOTDs and backup the 00-header
