@@ -4,6 +4,7 @@
 #Copy necessary files
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cp -a $DIR/. ~
+rm -r ~/.git
 
 # Vim settings
 ## First, download the Vundle library
