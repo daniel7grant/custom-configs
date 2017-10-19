@@ -14,6 +14,8 @@ stty -ixon
 bind '"\C-s":"sudo !!\n"'
 bind '"\es":"sudo !!\n"'
 
+alias svim='sudo vim -S .vimrc_root'
+
 PATH=$PATH:$HOME/bin
 
 export PATH
