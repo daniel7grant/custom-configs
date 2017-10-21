@@ -8,7 +8,8 @@ fi
 # User specific environment and startup programs
 
 # Ctrl+S doesn't freeze terminal
-stty -ixon
+sttty -ixon
+stty susp
 
 # Press Ctrl+S/Alt+S to run last command with sudo
 bind '"\C-s":"sudo !!\n"'
