@@ -4,10 +4,12 @@
 	process = git-lfs filter-process
 	required = true
 [user]
-	name = daniel7grant
+	name = Grant
 [user]
 	email = gergely.daniel7@gmail.com
 [core]
 	editor = vim
 [merge]
 	tool = vimdiff
+[push]
+	default = simple
