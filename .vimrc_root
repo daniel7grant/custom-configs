@@ -1,15 +1,5 @@
-set nocompatible  
-" set rtp+=/home/grant/.vim/bundle/vundle/
-" call vundle#rc()
-
-"This is the Vundle package, which can be found on GitHub.
-" For GitHub repos, you specify plugins using the
-" 'user/repository' format
-" Plugin 'gmarik/vundle'
-" Plugin 'wakatime/vim-wakatime'
-
 " SET COLORS
-"colorscheme badwolf 
+set t_Co=256
 set background=dark
 
 " INDENTATION SETTINGS
@@ -58,6 +48,7 @@ map <C-a> <Esc>ggVG<CR>
 map <C-b> %
 map <C-d> yyp$a
 imap <C-d> <Esc>yyp$a
+vmap <C-d> yP
 map <C-f> /
 imap <C-f> <Esc>/
 map <C-h> :%s/
@@ -69,8 +60,26 @@ imap <C-l> <Esc>ddpa
 map <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>
 map <C-y> <Esc>dd
-
-
-
-
-
+map <C-z> <Esc>u
+imap <C-z> <Esc>u
+" Tabs tabs tabs
+map <C-t> gt
+imap <C-t> <Esc>gti
+map t :tabedit<Space>
+map t<Space> :tabedit<Space>
+map t :tabedit 
+map t1 1gt
+map t2 2gt
+map t3 3gt
+map t4 4gt
+map t5 5gt
+map t6 6gt
+map t7 7gt
+map t8 8gt
+map t9 9gt
+" Fugitive commands
+map ga <Esc>:Gstatus<CR>
+map gs <Esc>:Gstatus<CR>
+map gc <Esc>:Gcommit<CR>
+map gp <Esc>:Gpush<CR>
+map gr <Esc>:Gpull<CR>
