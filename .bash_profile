@@ -8,7 +8,7 @@ fi
 # User specific environment and startup programs
 
 # Ctrl+S doesn't freeze terminal
-sttty -ixon
+stty -ixon
 stty susp
 
 # Press Ctrl+S/Alt+S to run last command with sudo
