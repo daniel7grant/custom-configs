@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/d/wamp64/www/ratcheto/.git'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/usr/local'
+let g:netrw_dirhist_2='/usr/local/etc'
+let g:netrw_dirhist_3='/usr/local/etc/nginx-config'
+let g:netrw_dirhist_4='/home/grant/nginx-revproxy/config'

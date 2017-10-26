@@ -72,15 +72,15 @@ map <C-f> /
 imap <C-f> <Esc>/
 map <C-h> :%s/
 imap <C-h> <Esc>:%s/
+map <C-j> ddp
+imap <C-j> <Esc>ddpa
 map <C-k> ddkP
 imap <C-k> <Esc>ddkPa
-map <C-l> ddp
-imap <C-l> <Esc>ddpa
 map <C-o> :tabe .<CR>
 imap <C-o> <Esc>:tabe .<CR>
 map <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>
-map <C-y> <Esc>dd
+map <C-l> <Esc>dd
 map <C-z> <Esc>u
 imap <C-z> <Esc>u
 " Tabs tabs tabs
