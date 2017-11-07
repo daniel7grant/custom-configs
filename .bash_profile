@@ -18,15 +18,10 @@ bind '"\es":"sudo !!\n"'
 # Run vim with as many config as it is possible as sudo
 alias svim='sudo vim -S ~/.vimrc_root'
 
-parse_git_branch() {
-	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
-export PS1="[\u@\h \W\$(parse_git_branch)]$ "
+#export PS1="[\u@\h \W]$ "
 # Uncomment for colorful magic
-#export PS1="\[\033[92m\]\u@\h \[\033[33m\]\W\[\033[96m\]\$(parse_git_branch)\[\033[00m\] $ "
+export PS1="\[\033[92m\]\u@\h \[\033[33m\]\W\[\033[96m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')\[\033[00m\] \\$ "
 
-#PS1="[\u@\h \W$( git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/' )]\$ "
 
 PATH=$PATH:$HOME/bin
 
