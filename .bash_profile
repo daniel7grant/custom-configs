@@ -18,10 +18,10 @@ bind '"\es":"sudo !!\n"'
 # Run vim with as many config as it is possible as sudo
 alias svim='sudo vim -S ~/.vimrc_root'
 
-#export PS1="[\u@\h \W]$ "
-# Uncomment for colorful magic
+# Set prompt
 export PS1="\[\033[92m\]\u@\h \[\033[33m\]\W\[\033[96m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')\[\033[00m\] \\$ "
-
+# Set old working directory (cd -)
+export OLDPWD=$( cat ~/.oldpwd )
 
 PATH=$PATH:$HOME/bin
 
