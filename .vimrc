@@ -62,8 +62,10 @@ set foldmethod=syntax
 " DISABLE CONTINUING COMMENT ON <ENTER>
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" SET DIRECTORY TO FILE'S POSITION
+autocmd BufEnter * silent! lcd %:p:h
+
 " SET COMMON KEYBOARD COMBINATIONS
-map <C-a> <Esc>ggVG<CR>
 map <C-b> %
 map <C-d> yyp$a
 imap <C-d> <Esc>yyp$a
