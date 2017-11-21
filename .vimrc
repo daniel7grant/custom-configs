@@ -66,24 +66,40 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd BufEnter * silent! lcd %:p:h
 
 " SET COMMON KEYBOARD COMBINATIONS
+"" Jump to other brace
 map <C-b> %
+"" Duplicate line
 map <C-d> yyp$a
 imap <C-d> <Esc>yyp$a
 vmap <C-d> yP
+"" Find
 map <C-f> /
 imap <C-f> <Esc>/
+"" Replace
 map <C-h> :%s/
 imap <C-h> <Esc>:%s/
+"" Move lines down or up
 map <C-j> ddp
 imap <C-j> <Esc>ddpa
 map <C-k> ddkP
 imap <C-k> <Esc>ddkPa
+"" Remove line
+map <C-l> <Esc>dd
+"" New file 
+map <C-n> :tabnew<CR>
+imap <C-n> <Esc>:tabnew<CR>
+"" Open current folder in new tab
 map <C-o> :tabe .<CR>
 imap <C-o> <Esc>:tabe .<CR>
+"" Save, save&quit
 map <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>
-map <C-l> <Esc>dd
-map <C-z> <Esc>u
+map <C-w> :wq<CR>
+imap <C-w> <Esc>:wq<CR>
+"" Redo, undo
+map <C-y> <C-r>
+imap <C-y> <Esc><C-r>
+map <C-z> u
 imap <C-z> <Esc>u
 " Tabs tabs tabs
 map <C-t> gt
