@@ -21,7 +21,7 @@ alias svim='sudo vim -S ~/.vimrc_root'
 # Set prompt
 export PS1="\[\033[92m\]\u@\h \[\033[33m\]\W\[\033[96m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')\[\033[00m\] \\$ "
 # Set old working directory (cd -)
-export OLDPWD=$( cat ~/.oldpwd )
+export OLDPWD=$( cat ~/.oldpwd 2>/dev/null )
 
 PATH=$PATH:$HOME/bin
 

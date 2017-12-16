@@ -75,8 +75,8 @@ imap <C-o> <Esc>:tabe .<CR>
 "" Save, save&quit
 map <C-s> :w<CR>
 imap <C-s> <Esc>:w<CR>
-map <C-w> :wq<CR>
-imap <C-w> <Esc>:wq<CR>
+map <C-q> :wq<CR>
+imap <C-q> <Esc>:wq<CR>
 "" Redo, undo
 map <C-y> <C-r>
 imap <C-y> <Esc><C-r>
