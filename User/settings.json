@@ -1,0 +1,26 @@
+{
+    "workbench.colorTheme": "Monokai Dimmed",
+    "window.menuBarVisibility": "toggle",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 10000,
+    "files.exclude": {
+		"**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules":true,
+    },
+	"editor.minimap.enabled": false,
+	"editor.insertSpaces": false,
+    "editor.find.autoFindInSelection": true,
+	"editor.detectIndentation": false,
+	"editor.roundedSelection": false,
+	"editor.smoothScrolling": true,
+
+	"html.suggest.angular1": false,
+	"html.suggest.ionic": false,
+
+	"css.lint.important": "warning",
+
+}

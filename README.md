@@ -1,6 +1,12 @@
-# Custom configok
+# TODO
+Copy files according to your OS:
+* Windows: %APPDATA%\Code\User\
+* Mac: $HOME/Library/Application Support/Code/User/
+* Linux: $HOME/.config/Code/User/
 
-Személyre szabott configok a különböző szövegszerkesztőkhöz, fejlesztői környezetekhez és egyéb szoftverekhez.
+Download Extensions:
+* Wakatime: time-tracking extension
+* Google Search: search on Google with Ctrl+T
 
-Jelenleg config van:
-* Notepad++ (npp)
+Optional:
+* Vetur: for Vue highlightinh and linting
