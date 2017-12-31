@@ -4,7 +4,7 @@
 #Copy necessary files
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cp -a $DIR/. ~
-rm -rf ~/.git
+rm -rf ~/.git ~/todo.sh ~/todocat.sh ~/wakatime-key
 
 # Vim settings
 ## First, download the Vundle library

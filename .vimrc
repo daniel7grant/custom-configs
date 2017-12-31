@@ -12,6 +12,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tpope/vim-fugitive'
 
 " SET COLORS
+syntax on
 set t_Co=256
 set background=dark
 let g:badwolf_darkgutter = 1
