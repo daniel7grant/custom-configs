@@ -26,7 +26,7 @@ getbranchinfo(){
 		# git remote update &>/dev/null
 		BRANCH=$(git rev-parse --abbrev-ref HEAD)
 		REF=$(git for-each-ref --format="%(refname:short) %(upstream:track) " refs/heads | grep -E "^$BRANCH" -m1)
-		if [[ -n $(git status -uno -s) ]] ; then MOD='*' ; fi
+		if [[ -n $(git status -s) ]] ; then MOD='*' ; fi
 		echo "($( echo $REF | sed -e "s/$BRANCH/$BRANCH$MOD/g" -e 's/ahead /↑/g' -e 's/behind /↓/g' | tr -d '[, ]')) "
 	fi
 }
