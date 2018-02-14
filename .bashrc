@@ -27,12 +27,12 @@ getbranchinfo(){
 		BRANCH=$(git rev-parse --abbrev-ref HEAD)
 		REF=$(git for-each-ref --format="%(refname:short) %(upstream:track) " refs/heads | grep -E "^$BRANCH" -m1)
 		if [[ -n $(git status -uno -s) ]] ; then MOD='*' ; fi
-		echo $( echo $REF | sed -e "s/$BRANCH/$BRANCH$MOD/g" -e 's/ahead /↑/g' -e 's/behind /↓/g' | tr -d '[, ]')
+		echo "($( echo $REF | sed -e "s/$BRANCH/$BRANCH$MOD/g" -e 's/ahead /↑/g' -e 's/behind /↓/g' | tr -d '[, ]')) "
 	fi
 }
 
 # Set prompt
-export PS1="\[\033[92m\]\u@\h \[\033[33m\]\W\[\033[96m\] ($( getbranchinfo ))\[\033[00m\] \\$ "
+export PS1="\[\033[92m\]\u@\h \[\033[33m\]\W\[\033[96m\] \$( getbranchinfo )\[\033[00m\]\\$ "
 # Set old working directory (cd -)
 export OLDPWD=$( cat ~/.oldpwd 2>/dev/null )
 # Set favourite editor
