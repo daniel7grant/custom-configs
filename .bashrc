@@ -20,8 +20,19 @@ alias svim='sudo vim -S ~/.vimrc_root'
 # I like colors
 alias ls='ls --color -h'
 
+getbranchinfo(){
+	if [[ -n $(git rev-parse --is-inside-work-tree 2>/dev/null) ]]
+	then
+		# git remote update &>/dev/null
+		BRANCH=$(git rev-parse --abbrev-ref HEAD)
+		REF=$(git for-each-ref --format="%(refname:short) %(upstream:track) " refs/heads | grep -E "^$BRANCH" -m1)
+		if [[ -n $(git status -uno -s) ]] ; then MOD='*' ; fi
+		echo $( echo $REF | sed -e "s/$BRANCH/$BRANCH$MOD/g" -e 's/ahead /↑/g' -e 's/behind /↓/g' | tr -d '[, ]')
+	fi
+}
+
 # Set prompt
-export PS1="\[\033[92m\]\u@\h \[\033[33m\]\W\[\033[96m\]\$(command -v git &>/dev/null && git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')\[\033[00m\] \\$ "
+export PS1="\[\033[92m\]\u@\h \[\033[33m\]\W\[\033[96m\] ($( getbranchinfo ))\[\033[00m\] \\$ "
 # Set old working directory (cd -)
 export OLDPWD=$( cat ~/.oldpwd 2>/dev/null )
 # Set favourite editor
