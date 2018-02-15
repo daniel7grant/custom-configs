@@ -23,11 +23,11 @@ alias ls='ls --color -h'
 getbranchinfo(){
 	if [[ -n $(git rev-parse --is-inside-work-tree 2>/dev/null) ]]
 	then
-		# git remote update &>/dev/null
-		BRANCH=$(git rev-parse --abbrev-ref HEAD)
-		REF=$(git for-each-ref --format="%(refname:short) %(upstream:track) " refs/heads | grep -E "^$BRANCH" -m1)
+		BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
 		if [[ -n $(git status -s) ]] ; then MOD='*' ; fi
-		echo "($( echo $REF | sed -e "s/$BRANCH/$BRANCH$MOD/g" -e 's/ahead /↑/g' -e 's/behind /↓/g' | tr -d '[, ]')) "
+		REF=$(git for-each-ref --format="%(refname:short) %(upstream:track) " refs/heads 2>/dev/null | grep -E "^$BRANCH" -m1 \
+			| sed -e "s/$BRANCH/$BRANCH$MOD/g" -e 's/ahead /↑/g' -e 's/behind /↓/g' | tr -d '[, ]')
+		[[ -n $REF ]] && echo "($REF) " || echo "($BRANCH$MOD) "
 	fi
 }
 
