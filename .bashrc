@@ -32,7 +32,7 @@ getbranchinfo(){
 }
 
 # Set prompt
-export PS1="\[\033[92m\]\u@\h \[\033[33m\]\W\[\033[96m\] \$( getbranchinfo )\[\033[00m\]\\$ "
+export PS1="\[\033[92m\]\u@\h \[\033[33m\]\W\[\033[96m\] \$( getbranchinfo 2>/dev/null )\[\033[00m\]\\$ "
 # Set old working directory (cd -)
 export OLDPWD=$( cat ~/.oldpwd 2>/dev/null )
 # Set favourite editor
