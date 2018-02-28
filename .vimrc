@@ -60,6 +60,12 @@ set foldlevelstart=10
 set foldnestmax=15
 set foldmethod=syntax
 
+" PERSISTENT UNDO
+set undofile
+set undodir=$HOME/.vim/undo
+set undolevels=1000
+set undolevels=1000
+
 " DISABLE CONTINUING COMMENT ON <ENTER>
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
