@@ -19,6 +19,9 @@ bind '"\es":"sudo !!\n"'
 alias svim='sudo vim -S ~/.vimrc_root'
 # I like colors
 alias ls='ls --color -h'
+# And tabs
+alias vim='vim -p'
+
 
 getbranchinfo(){
 	if [[ -n $(git rev-parse --is-inside-work-tree 2>/dev/null) ]]

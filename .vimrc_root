@@ -47,6 +47,9 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " SET DIRECTORY TO FILE'S POSITION
 autocmd BufEnter * silent! lcd %:p:h
 
+" SET COMMON COMMANDS
+command W w !sudo tee % > /dev/null
+
 " SET COMMON KEYBOARD COMBINATIONS
 "" Jump to other brace
 map <C-b> %
