@@ -12,8 +12,12 @@ stty -ixon
 stty susp 
 
 # Press Ctrl+S/Alt+S to run last command with sudo
-bind '"\C-s":"sudo !!\n"'
-bind '"\es":"sudo !!\n"'
+bind '"\C-s":"\C-e\C-usudo !!\n"'
+bind '"\es":"\C-e\C-usudo !!\n"'
+# Press Alt+C to comment out current line
+bind '"\ec":"\e#"'
+# Press Alt+V to repeat last vim command
+bind '"\ev":"!vim\C-m"'
 
 # Run vim with as many config as it is possible as sudo
 alias svim='sudo vim -S ~/.vimrc_root'
