@@ -7,6 +7,11 @@ fi
 
 # User specific aliases and functions
 
+# If shell is not interactive quit
+if [ -z "$PS1" ]; then
+	exit
+fi
+
 # Ctrl+S doesn't freeze terminal
 stty -ixon
 stty susp 
@@ -16,8 +21,6 @@ bind '"\C-s":"\C-e\C-usudo !!\n"'
 bind '"\es":"\C-e\C-usudo !!\n"'
 # Press Alt+C to comment out current line
 bind '"\ec":"\e#"'
-# Press Alt+V to repeat last vim command
-bind '"\ev":"!vim\C-m"'
 
 # Run vim with as many config as it is possible as sudo
 alias svim='sudo vim -S ~/.vimrc_root'
