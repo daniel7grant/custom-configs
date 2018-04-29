@@ -9,7 +9,7 @@ fi
 
 # If shell is not interactive quit
 if [ -z "$PS1" ]; then
-	exit
+	return
 fi
 
 # Ctrl+S doesn't freeze terminal
