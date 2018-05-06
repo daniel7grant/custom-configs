@@ -1,3 +1,3 @@
 # ~/.bash_logout
 
-pwd > ~/.oldpwd
+if [ "$( pwd )" != "$HOME" ] ; then pwd > ~/.oldpwd ; fi
