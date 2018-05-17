@@ -28,6 +28,7 @@ set cindent
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+autocmd Filetype yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 " SET LINE NUMBERS (SWITCH-OFF: SET NONUMBER)
 set number
@@ -112,20 +113,20 @@ imap <C-y> <Esc><C-r>
 map <C-z> u
 imap <C-z> <Esc>u
 " Tabs tabs tabs
-map <C-t> gt
-imap <C-t> <Esc>gti
-map t :tabedit<Space>
-map t<Space> :tabedit<Space>
-map t :tabedit 
-map t1 1gt
-map t2 2gt
-map t3 3gt
-map t4 4gt
-map t5 5gt
-map t6 6gt
-map t7 7gt
-map t8 8gt
-map t9 9gt
+noremap <C-t> gt
+inoremap <C-t> <Esc>gti
+noremap t :tabedit<Space>
+noremap t<Space> :tabedit<Space>
+noremap t :tabedit 
+noremap t1 1gt
+noremap t2 2gt
+noremap t3 3gt
+noremap t4 4gt
+noremap t5 5gt
+noremap t6 6gt
+noremap t7 7gt
+noremap t8 8gt
+noremap t9 9gt
 " Fugitive commands
 map ga <Esc>:Gstatus<CR>
 map gs <Esc>:Gstatus<CR>
