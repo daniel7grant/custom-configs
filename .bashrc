@@ -39,7 +39,7 @@ getbranchinfo(){
 	then
 		BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
 		if [[ -n $(git status -s) ]] ; then MOD='*' ; fi
-		REF=$(git for-each-ref --format="%(refname:short) %(upstream:track) " refs/heads 2>/dev/null | grep -E "^$BRANCH" -m1 \
+		REF=$(git for-each-ref --format="%(refname:short) %(upstream:track) " refs/heads 2>/dev/null | grep -E "^$BRANCH" -m1 --color=never \
 			| sed -e "s/$BRANCH/$BRANCH$MOD/g" -e 's/ahead /↑/g' -e 's/behind /↓/g' | tr -d '[, ]')
 		[[ -n $REF ]] && echo "($REF) " || echo "($BRANCH$MOD) "
 	fi
