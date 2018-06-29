@@ -26,8 +26,12 @@ bind '"\ec":"\e#"'
 alias svim='sudo vim -S ~/.vimrc_root'
 # I like colors
 alias ls='ls --color -h'
+alias grep='grep --color=always'
+alias jest='jest --color'
 # And tabs
 alias vim='vim -p'
+# Stfu curl
+alias curl='curl -s'
 
 
 getbranchinfo(){
