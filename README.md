@@ -2,5 +2,10 @@
 
 Személyre szabott configok a különböző szövegszerkesztőkhöz, fejlesztői környezetekhez és egyéb szoftverekhez.
 
-Jelenleg config van:
-* Notepad++ (npp)
+Shellek:
+* Bash
+
+Szövegszerkesztők, IDE-k:
+* VS Code
+* IntelliJ
+* Notepad++
