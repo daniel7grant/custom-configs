@@ -1,11 +1,8 @@
-# Custom configok
+# IntelliJ
 
-Személyre szabott configok a különböző szövegszerkesztőkhöz, fejlesztői környezetekhez és egyéb szoftverekhez.
+Settings.jar a különböző JETBRAINS (IntelliJ, WebStorm, PHPStorm, stb) termékekhez.
 
-Shellek:
-* Bash
+Használat: File > Import settings...
 
-Szövegszerkesztők, IDE-k:
-* VS Code
-* IntelliJ
-* Notepad++
+Extension:
+* Wakatime
