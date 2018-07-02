@@ -30,12 +30,7 @@
         "command": "-editor.action.copyLinesDownAction",
         "when": "editorTextFocus && !editorReadonly"
     },
-    {
-        "key": "ctrl+d",
-        "command": "-editor.action.addSelectionToNextFindMatch",
-        "when": "editorFocus"
-    },
-    {
+	{
         "key": "ctrl+l",
         "command": "editor.action.deleteLines",
         "when": "editorTextFocus && !editorReadonly"
@@ -71,11 +66,7 @@
         "key": "ctrl+shift+u",
         "command": "editor.action.transformToUppercase"
     },
-    {
-        "key": "ctrl+t",
-        "command": "google-search-ext.searchGoogle"
-    },
-    {
+	{
         "key": "ctrl+shift+r",
         "command": "workbench.action.reloadWindow"
     },
@@ -106,7 +97,7 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+alt+t",
+		"key": "shift+alt+t",
         "command": "workbench.action.terminal.toggleTerminal"
     },
     {
@@ -114,7 +105,7 @@
         "command": "-workbench.action.terminal.toggleTerminal"
     },
     {
-        "key": "ctrl+numpad_subtract",
+		"key": "ctrl+oem_minus",
         "command": "editor.fold",
         "when": "editorTextFocus"
     },
@@ -132,5 +123,176 @@
         "key": "ctrl+shift+oem_6",
         "command": "-editor.unfold",
         "when": "editorTextFocus"
-    }
+	},
+	{
+		"key": "ctrl+k ctrl+w",
+		"command": "workbench.action.closeWindow"
+	},
+	{
+		"key": "ctrl+shift+w",
+		"command": "-workbench.action.closeWindow"
+	},
+	{
+		"key": "ctrl+shift+w",
+		"command": "workbench.action.closeAllEditors"
+	},
+	{
+		"key": "ctrl+k ctrl+w",
+		"command": "-workbench.action.closeAllEditors"
+	},
+	{
+		"key": "ctrl+shift+b",
+		"command": "editor.action.jumpToBracket",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+oem_5",
+		"command": "-editor.action.jumpToBracket",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+oem_6",
+		"command": "workbench.action.tasks.build"
+	},
+	{
+		"key": "ctrl+shift+b",
+		"command": "-workbench.action.tasks.build"
+	},
+	{
+		"key": "ctrl+shift+0",
+		"command": "workbench.action.zoomReset"
+	},
+	{
+		"key": "ctrl+numpad0",
+		"command": "-workbench.action.zoomReset"
+	},
+	{
+		"key": "ctrl+alt+e",
+		"command": "editor.emmet.action.wrapWithAbbreviation"
+	},
+	{
+		"key": "ctrl+shift+a",
+		"command": "editor.action.changeAll",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+f2",
+		"command": "-editor.action.changeAll",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+alt+r",
+		"command": "npm-script.run"
+	},
+	{
+		"key": "ctrl+r shift+r",
+		"command": "-npm-script.run"
+	},
+	{
+		"key": "ctrl+down",
+		"command": "-scrollLineDown",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+up",
+		"command": "-scrollLineUp",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+up",
+		"command": "editor.action.addSelectionToPreviousFindMatch"
+	},
+	{
+		"key": "ctrl+down",
+		"command": "editor.action.addSelectionToNextFindMatch",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+d",
+		"command": "-editor.action.addSelectionToNextFindMatch",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+alt+down",
+		"command": "editor.action.moveSelectionToNextFindMatch",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+k ctrl+d",
+		"command": "-editor.action.moveSelectionToNextFindMatch",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+alt+up",
+		"command": "editor.action.moveSelectionToPreviousFindMatch"
+	},
+	{
+		"key": "shift+alt+up",
+		"command": "editor.action.insertCursorAbove",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+alt+up",
+		"command": "-editor.action.insertCursorAbove",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+alt+down",
+		"command": "editor.action.insertCursorBelow",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+alt+down",
+		"command": "-editor.action.insertCursorBelow",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+i",
+		"command": "-expandLineSelection",
+		"when": "textInputFocus"
+	},
+	{
+		"key": "ctrl+i",
+		"command": "npm-intellisense.import"
+	},
+	{
+		"key": "ctrl+shift+i",
+		"command": "editor.action.organizeImports",
+		"when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
+	},
+	{
+		"key": "shift+alt+o",
+		"command": "-editor.action.organizeImports",
+		"when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
+	},
+	{
+		"key": "ctrl+alt+i",
+		"command": "editor.action.indentationToTabs"
+	},
+	{
+		"key": "ctrl+alt+c",
+		"command": "notifications.clearAll"
+	},
+	{
+		"key": "ctrl+alt+d",
+		"command": "workbench.action.splitEditor"
+	},
+	{
+		"key": "ctrl+oem_5",
+		"command": "-workbench.action.splitEditor"
+	},
+	{
+		"key": "ctrl+alt+d",
+		"command": "workbench.action.terminal.split",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "ctrl+oem_5",
+		"command": "-workbench.action.terminal.split",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "ctrl+t",
+		"command": "extension.simpleSearch"
+	}
 ]
