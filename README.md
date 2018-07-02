@@ -5,8 +5,11 @@ Copy files according to your OS:
 * Linux: $HOME/.config/Code/User/
 
 Download Extensions:
-* Wakatime: time-tracking extension
-* Google Search: search on Google with Ctrl+T
-
-Optional:
-* Vetur: for Vue highlightinh and linting
+* burcadoruciprian.simple-search
+* christian-kohler.npm-intellisense
+* dbaeumer.vscode-eslint
+* eamodio.gitlens
+* eg2.vscode-npm-script
+* sysoev.language-stylus
+* WakaTime.vscode-wakatime
+* wix.vscode-import-cost
