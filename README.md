@@ -1,11 +1,4 @@
-# Custom configok
+# Mangie
 
-Személyre szabott configok a különböző szövegszerkesztőkhöz, fejlesztői környezetekhez és egyéb szoftverekhez.
+Első reboot után lefuttatandó scriptek a Manjaro Budgie rendszerhez.
 
-Shellek:
-* Bash
-
-Szövegszerkesztők, IDE-k:
-* VS Code
-* IntelliJ
-* Notepad++
