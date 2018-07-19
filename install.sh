@@ -17,6 +17,7 @@ pacman -R brasero empathy gedit hexchat lollypop manjaro-hello manjaro-documenta
 function cowerinstall(){ cd ; cower -d $1 ; cd $1 ; makepkg -si ; }
 cowerinstall google-chrome
 cowerinstall visual-studio-code-bin
+cowerinstall discord
 cowerinstall spotify
-cowerinstall slack
+cowerinstall slack-desktop
 cowerinstall jetbrains-toolbox
