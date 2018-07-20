@@ -1,0 +1,4 @@
+#!/bin/bash
+curl -Ls https://source.unsplash.com/1920x1080/?${1:-nature} > /tmp/background.jpg
+mv /tmp/background.jpg $HOME/Pictures/background.jpg
+dconf write /org/gnome/desktop/background/picture-uri "'file://$HOME/Pictures/background.jpg'"

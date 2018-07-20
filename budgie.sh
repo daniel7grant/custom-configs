@@ -1,3 +1,4 @@
+#!/bin/bash
 # SET THEME
 dconf write /com/solus-project/budgie-panel/dark-theme true
 dconf write /com/solus-project/budgie-panel/builtin-theme false
@@ -6,7 +7,7 @@ dconf write /com/solus-project/budgie-panel/builtin-theme false
 PANELID=$( dconf list /com/solus-project/budgie-panel/panels/ )
 dconf write /com/solus-project/budgie-panel/panels/${PANELID}location "'bottom'"
 dconf write /com/solus-project/budgie-panel/panels/${PANELID}size 45
-dconf write /com/solus-project/budgie-panel/panels/${PANELID}transparency "'dynamic'"
+dconf write /com/solus-project/budgie-panel/panels/${PANELID}transparency "'always'"
 
 # SET PINNED APPLICATIONS
 INSTANCEID=$( dconf list /com/solus-project/budgie-panel/instance/icon-tasklist/ )

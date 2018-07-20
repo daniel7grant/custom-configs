@@ -1,3 +1,4 @@
+#!/bin/bash
 # SET USUALS
 dconf write /org/gnome/desktop/wm/keybindings/show-desktop "['<Super>d']"
 dconf write /org/gnome/desktop/wm/keybindings/toggle-maximized "['<Super>Up']"
