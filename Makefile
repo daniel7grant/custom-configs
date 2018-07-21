@@ -7,3 +7,5 @@ bindkeys:
 	./bindkeys.sh
 randombg:
 	./randombg.sh
+xpalert:
+	./xpalert.sh
