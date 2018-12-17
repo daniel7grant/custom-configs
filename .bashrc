@@ -16,6 +16,9 @@ fi
 stty -ixon
 stty susp 
 
+# Tabwidth 4
+tabs 4
+
 # Press Ctrl+S/Alt+S to run last command with sudo
 bind '"\C-s":"\C-e\C-usudo !!\n"'
 bind '"\es":"\C-e\C-usudo !!\n"'
@@ -23,7 +26,7 @@ bind '"\es":"\C-e\C-usudo !!\n"'
 bind '"\ec":"\e#"'
 
 # Run vim with as many config as it is possible as sudo
-alias svim='sudo vim -S ~/.vimrc_root'
+alias svim='sudo vim -pS ~/.vimrc_root'
 # I like colors
 alias ls='ls --color -h'
 alias grep='grep --color=always'
