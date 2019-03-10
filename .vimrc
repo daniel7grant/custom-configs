@@ -89,6 +89,7 @@ imap <C-f> <Esc>/
 "" Replace
 map <C-h> :%s/
 imap <C-h> <Esc>:%s/
+vmap <C-h> :s/
 "" Move lines down or up
 map <C-j> ddp
 imap <C-j> <Esc>ddpa

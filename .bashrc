@@ -19,6 +19,13 @@ stty susp 
 # Tabwidth 4
 tabs 4
 
+# Allow for better history
+shopt -s histappend
+export HISTFILESIZE=1000000
+export HISTSIZE=1000000
+export HISTCONTROL=ignoreboth
+export HISTIGNORE='bg:fg:history'
+
 # Press Ctrl+S/Alt+S to run last command with sudo
 bind '"\C-s":"\C-e\C-usudo !!\n"'
 bind '"\es":"\C-e\C-usudo !!\n"'
@@ -29,13 +36,13 @@ bind '"\ec":"\e#"'
 alias svim='sudo vim -pS ~/.vimrc_root'
 # I like colors
 alias ls='ls --color -h'
+alias ll='ls --color -hl'
 alias grep='grep --color=always'
 alias jest='jest --color'
 # And tabs
 alias vim='vim -p'
 # Stfu curl
 alias curl='curl -s'
-
 
 getbranchinfo(){
 	if [[ -n $(git rev-parse --is-inside-work-tree 2>/dev/null) ]]
