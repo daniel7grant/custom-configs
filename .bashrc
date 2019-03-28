@@ -39,8 +39,11 @@ alias ls='ls --color -h'
 alias ll='ls --color -hl'
 alias grep='grep --color=always'
 alias jest='jest --color'
+alias hl='highlight -O xterm256 -s molokai'
 # And tabs
 alias vim='vim -p'
+# And other kinda tabs
+alias diff='diff -yt'
 # Stfu curl
 alias curl='curl -s'
 
