@@ -16,3 +16,11 @@ make bash-install
 make vim-install
 ```
 respectively.
+
+### Private files
+
+Private files are bundled into a gzipped tarball and symmetrycally encrypted with gpg. Run
+```
+make decrypt
+```
+and enter the password to decrypt them, and run the installation as usual.
