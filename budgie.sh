@@ -13,6 +13,12 @@ dconf write /com/solus-project/budgie-panel/panels/${PANELID}transparency "'alwa
 INSTANCEID=$( dconf list /com/solus-project/budgie-panel/instance/icon-tasklist/ )
 dconf write /com/solus-project/budgie-panel/instance/icon-tasklist/${INSTANCEID}pinned-launchers "['org.gnome.Terminal.desktop', 'org.gnome.Nautilus.desktop', 'google-chrome.desktop']"
 
+# COPY .CONFIG FILES FROM /ETC
+cp -ar etc/.config/* ~/.config
+
+# SETUP TERMINATOR
+dconf write /org/gnome/desktop/applications/terminal/exec "'terminator'"
+
 # SET TERMINAL PREFERENCES
 TERMINALPREFID=$( dconf list /org/gnome/terminal/legacy/profiles:/ )
 dconf write /org/gnome/terminal/legacy/new-terminal-mode "'tab'"
@@ -22,3 +28,4 @@ dconf write /org/gnome/settings-daemon/peripherals/keyboard/bell-custom-file "''
 
 # RELOAD PANEL
 nohup budgie-panel --replace &
+
