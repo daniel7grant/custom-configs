@@ -31,6 +31,8 @@ bind '"\C-s":"\C-e\C-usudo !!\n"'
 bind '"\es":"\C-e\C-usudo !!\n"'
 # Press Alt+C to comment out current line
 bind '"\ec":"\e#"'
+# Press Alt+W to watch last command
+bind '"\ew":"\C-e\C-uwatch -n1 !!\n"'
 
 # Run vim with as many config as it is possible as sudo
 alias svim='sudo vim -pS ~/.vimrc_root'
@@ -44,6 +46,8 @@ alias hl='highlight -O xterm256 -s molokai'
 alias vim='vim -p'
 # And other kinda tabs
 alias diff='diff -yt'
+# Two sec why
+alias watch='watch -n1'
 # Stfu curl
 alias curl='curl -s'
 
