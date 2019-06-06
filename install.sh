@@ -8,7 +8,7 @@ sudo pacman -Syu
 # INSTALL BASIC PACKAGES
 sudo pacman -S git vim bash-completion htop  # BASIC 
 sudo pacman -S base-devel yay                # AUR
-sudo pacman -S kupfer terminator             # OS USAGE
+sudo pacman -S kupfer terminator playerctl   # OS USAGE
 sudo pacman -S remmina freerdp               # RDP
 sudo pacman -S nodejs npm                    # JS
 sudo pacman -S php composer                  # PHP
