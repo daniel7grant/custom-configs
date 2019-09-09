@@ -53,13 +53,14 @@ alias watch='watch -n1'
 alias curl='curl -s'
 
 # Make stupid commands easier
-function tunnel {
+# Create tunnel via jumpserver
+tunnel() {
 	through=${3:-h}
 	ssh -fNL $2:$1:443 $through;
 	echo https://localhost:$2;
 }
 
-getbranchinfo(){
+getbranchinfo() {
 	if [[ -n $(git rev-parse --is-inside-work-tree 2>/dev/null) ]]
 	then
 		BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
