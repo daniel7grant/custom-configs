@@ -39,6 +39,7 @@ alias svim='sudo vim -pS ~/.vimrc_root'
 # I like colors
 alias ls='ls --color -h'
 alias ll='ls --color -hl'
+alias la='ls --color -hla'
 alias grep='grep --color=always'
 alias jest='jest --color'
 alias hl='highlight -O xterm256 -s molokai'
@@ -50,6 +51,13 @@ alias diff='diff -yt'
 alias watch='watch -n1'
 # Stfu curl
 alias curl='curl -s'
+
+# Make stupid commands easier
+function tunnel {
+	through=${3:-h}
+	ssh -fNL $2:$1:443 $through;
+	echo https://localhost:$2;
+}
 
 getbranchinfo(){
 	if [[ -n $(git rev-parse --is-inside-work-tree 2>/dev/null) ]]
