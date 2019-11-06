@@ -54,7 +54,7 @@ alias curl='curl -s'
 
 # Make stupid commands easier
 # Create tunnel via jumpserver
-tunnel() {
+htunnel() {
 	through=${3:-h}
 	ssh -fNL $2:$1:443 $through;
 	echo https://localhost:$2;
