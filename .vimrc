@@ -9,7 +9,15 @@ Plugin 'gmarik/vundle'
 Plugin 'wakatime/vim-wakatime'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'mattn/emmet-vim'
+Plugin 'prettier/vim-prettier'
+" FILETYPES
+Plugin 'chr4/nginx.vim'
+Plugin 'cespare/vim-toml'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'othree/javascript-libraries-syntax.vim'
 
 " SET COLORS
 syntax on
@@ -25,7 +33,8 @@ colorscheme molokai
 " INDENTATION SETTINGS
 filetype plugin indent on
 set cindent
-set tabstop=4
+set expandtab
+"set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 autocmd Filetype yaml setlocal ts=2 sts=2 sw=2 expandtab
