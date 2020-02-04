@@ -18,6 +18,7 @@ Plugin 'chr4/nginx.vim'
 Plugin 'cespare/vim-toml'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'nfnty/vim-nftables'
 
 " SET COLORS
 syntax on
