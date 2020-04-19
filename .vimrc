@@ -13,6 +13,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'mattn/emmet-vim'
 Plugin 'prettier/vim-prettier'
+Plugin 'posva/vim-vue'
 " FILETYPES
 Plugin 'chr4/nginx.vim'
 Plugin 'cespare/vim-toml'
