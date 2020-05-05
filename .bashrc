@@ -40,7 +40,7 @@ alias svim='sudo vim -pS ~/.vimrc_root'
 alias ls='ls --color -h'
 alias ll='ls --color -hl'
 alias la='ls --color -hla'
-alias grep='grep --color=always'
+alias grep='grep --color=auto'
 alias jest='jest --color'
 alias hl='highlight -O xterm256 -s molokai'
 # And tabs
@@ -51,6 +51,8 @@ alias diff='diff -yt'
 alias watch='watch -n1'
 # Stfu curl
 alias curl='curl -s'
+# Open is open
+alias open='xdg-open'
 
 # Make stupid commands easier
 # Create tunnel via jumpserver
@@ -77,6 +79,8 @@ export PS1="\[\033[92m\]\u@\h \[\033[33m\]\W\[\033[96m\] \$( getbranchinfo 2>/de
 export OLDPWD=$( cat ~/.oldpwd 2>/dev/null )
 # Set favourite editor
 export EDITOR="vim -p"
+# Set deafult browser
+export BROWSER=/usr/bin/firefox
 
 PATH=$PATH:$HOME/bin
 
