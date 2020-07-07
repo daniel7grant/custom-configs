@@ -16,7 +16,7 @@ dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/ter
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal1/name "'Open terminal'"
 
 # KUPFER ON SUPER+K
-dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/kupfer/binding "'<Super>k'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/kupfer/binding "'<Super>s'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/kupfer/command "'kupfer'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/kupfer/name "'Show Kupfer'"
 
