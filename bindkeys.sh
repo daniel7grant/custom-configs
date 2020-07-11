@@ -15,15 +15,20 @@ dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/ter
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal1/command "'terminator'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal1/name "'Open terminal'"
 
-# KUPFER ON SUPER+K
+# KUPFER ON SUPER+S
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/kupfer/binding "'<Super>s'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/kupfer/command "'kupfer'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/kupfer/name "'Show Kupfer'"
 
-# AREA SCREENSHOT ON ALT+X
+# FLAMESHOT ON ALT+X
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/screenshot/binding "'<Alt>x'"
-dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/screenshot/command "'gnome-screenshot -ac'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/screenshot/command "'flameshot gui'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/screenshot/name "'Area Screenshot'"
+
+# RESTART BUDGIE ON SUPER+SHIFT+R
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie/binding "'<Shift><Super>r'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie/command "'nohup budgie-panel --replace &'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie/name "'Restart Budgie desktop'"
 
 # PLAY/STOP, PREVIOUS AND NEXT WITH SUPER+F{10..12}
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/playerctl-play/binding "'<Super>F10'"
@@ -38,4 +43,4 @@ dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/pla
 
 # APPLY CUSTOM BINDS
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings \
-	"['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/kupfer/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/screenshot/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/playerctl-play/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/playerctl-prev/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/playerctl-next/']"
+	"['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/terminal1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/kupfer/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/screenshot/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/playerctl-play/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/playerctl-prev/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/playerctl-next/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/budgie/']"
