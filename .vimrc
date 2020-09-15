@@ -13,13 +13,13 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'mattn/emmet-vim'
 Plugin 'prettier/vim-prettier'
-Plugin 'posva/vim-vue'
 " FILETYPES
 Plugin 'chr4/nginx.vim'
 Plugin 'cespare/vim-toml'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'nfnty/vim-nftables'
+Plugin 'posva/vim-vue'
 
 " SET COLORS
 syntax on
@@ -36,7 +36,7 @@ colorscheme molokai
 filetype plugin indent on
 set cindent
 set expandtab
-"set tabstop=4
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 autocmd Filetype yaml setlocal ts=2 sts=2 sw=2 expandtab
