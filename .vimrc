@@ -1,25 +1,30 @@
 set nocompatible  
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+"set rtp+=~/.vim/bundle/vundle/
+"call vundle#rc()
 
-"This is the Vundle package, which can be found on GitHub.
+" Move to Plug
+call plug#begin('~/.vim/plugged')
+
+" Plug plugins
 " For GitHub repos, you specify plugins using the
 " 'user/repository' format
-Plugin 'gmarik/vundle'
-Plugin 'wakatime/vim-wakatime'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'mattn/emmet-vim'
-Plugin 'prettier/vim-prettier'
+Plug 'gmarik/vundle'
+Plug 'wakatime/vim-wakatime'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'mattn/emmet-vim'
+Plug 'prettier/vim-prettier'
 " FILETYPES
-Plugin 'chr4/nginx.vim'
-Plugin 'cespare/vim-toml'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'othree/javascript-libraries-syntax.vim'
-Plugin 'nfnty/vim-nftables'
-Plugin 'posva/vim-vue'
+Plug 'chr4/nginx.vim'
+Plug 'cespare/vim-toml'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'nfnty/vim-nftables'
+Plug 'posva/vim-vue'
+
+call plug#end()
 
 " SET COLORS
 syntax on
