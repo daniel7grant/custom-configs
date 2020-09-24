@@ -3,6 +3,7 @@
 dconf write /org/gnome/desktop/wm/keybindings/show-desktop "['<Super>d']"
 dconf write /org/gnome/desktop/wm/keybindings/toggle-maximized "['<Super>Up']"
 dconf write /org/gnome/desktop/wm/keybindings/maximize "@as []"
+dconf write /org/gnome/desktop/wm/keybindings/close "['<Alt>F4', '<Super>Q']"
 
 # ADD CUSTOM
 # TERMINAL ON SUPER+T
