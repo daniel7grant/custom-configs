@@ -1,6 +1,4 @@
 set nocompatible  
-"set rtp+=~/.vim/bundle/vundle/
-"call vundle#rc()
 
 " Move to Plug
 call plug#begin('~/.vim/plugged')
@@ -8,13 +6,25 @@ call plug#begin('~/.vim/plugged')
 " Plug plugins
 " For GitHub repos, you specify plugins using the
 " 'user/repository' format
-Plug 'gmarik/vundle'
 Plug 'wakatime/vim-wakatime'
+Plug 'mbbill/undotree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdcommenter'
+Plug 'tpope/vim-surround'
+" NERDTREE
+Plug 'preservim/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'Xuyuanp/nerdtree-git-plugin' 
+Plug 'ryanoasis/vim-devicons'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+" AUTOCOMPLETE, LINT, FORMAT
 Plug 'mattn/emmet-vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'w0rp/ale'
+Plug 'sheerun/vim-polyglot'
 Plug 'prettier/vim-prettier'
 " FILETYPES
 Plug 'chr4/nginx.vim'
@@ -36,6 +46,39 @@ let g:jellybeans_use_lowcolor_black = 1
 let g:rehash256 = 1
 let g:sierra_Campfire = 1
 colorscheme molokai
+
+" SET LEADER
+let mapleader = ","
+
+" SET AUTOCOMPLETE SETTINGS
+let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace'], 'javascript': ['prettier', 'eslint']}
+let g:coc_user_config = {}
+let g:coc_global_extensions = [
+  \ 'coc-emmet', 
+  \ 'coc-css', 
+  \ 'coc-html', 
+  \ 'coc-json', 
+  \ 'coc-prettier', 
+  \ 'coc-tsserver', 
+  \ 'coc-snippets', 
+  \ 'coc-lua',
+  \ 'coc-python',
+  \ 'coc-java',
+  \ 'coc-eslint']
+
+" NERDTREE SETTINGS
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeMinimalUI = 1 " hide helper
+let g:NERDTreeIgnore = ['^.git$', '^node_modules$', '^vendor$'] " ignore node_modules to increase load speed
+let g:NERDTreeStatusline = '' " set to empty to use lightline
+noremap <C-b> :NERDTreeToggle<CR>
+
+" FUZZY FIND SETTINGS
+nnoremap <C-p> :GFiles<CR>
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit'}
 
 " INDENTATION SETTINGS
 filetype plugin indent on
@@ -82,6 +125,13 @@ set undofile
 set undodir=$HOME/.vim/undo
 set undolevels=1000
 set undolevels=1000
+nnoremap <C-u> :UndotreeToggle<CR>
+
+" COMMENT OUT BLOCKS AND LINES
+nmap Kk <Plug>NERDCommenterComment
+vmap Kk <Plug>NERDCommenterComment
+nmap KK <Plug>NERDCommenterToggle
+vmap KK <Plug>NERDCommenterToggle<CR>gv
 
 " DISABLE CONTINUING COMMENT ON <ENTER>
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -93,42 +143,40 @@ autocmd BufEnter * silent! lcd %:p:h
 command W w !sudo tee % > /dev/null
 
 " SET COMMON KEYBOARD COMBINATIONS
-"" Jump to other brace
-map <C-b> %
 "" Duplicate line
-map <C-d> yyp$a
-imap <C-d> <Esc>yyp$a
-vmap <C-d> yP
+noremap <C-d> yyp$a
+inoremap <C-d> <Esc>yyp$a
+vnoremap <C-d> yP
 "" Find
-map <C-f> /
-imap <C-f> <Esc>/
+noremap <C-f> /
+inoremap <C-f> <Esc>/
 "" Replace
-map <C-h> :%s/
-imap <C-h> <Esc>:%s/
-vmap <C-h> :s/
+noremap <C-h> :%s/
+inoremap <C-h> <Esc>:%s/
+vnoremap <C-h> :s/
 "" Move lines down or up
-map <C-j> ddp
-imap <C-j> <Esc>ddpa
-map <C-k> ddkP
-imap <C-k> <Esc>ddkPa
+noremap <C-j> ddp
+inoremap <C-j> <Esc>ddpa
+noremap <C-k> ddkP
+inoremap <C-k> <Esc>ddkPa
 "" Remove line
-map <C-l> <Esc>dd
+noremap <C-l> <Esc>dd
 "" New file 
-map <C-n> :tabnew<CR>
-imap <C-n> <Esc>:tabnew<CR>
+noremap <C-n> :tabnew<CR>
+inoremap <C-n> <Esc>:tabnew<CR>
 "" Open current folder in new tab
-map <C-o> :tabe .<CR>
-imap <C-o> <Esc>:tabe .<CR>
+noremap <C-o> :tabe .<CR>
+inoremap <C-o> <Esc>:tabe .<CR>
 "" Save, save&quit
-map <C-s> :w<CR>
-imap <C-s> <Esc>:w<CR>
-map <C-q> :wq<CR>
-imap <C-q> <Esc>:wq<CR>
+noremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>
+noremap <C-q> :wq<CR>
+inoremap <C-q> <Esc>:wq<CR>
 "" Redo, undo
-map <C-y> <C-r>
-imap <C-y> <Esc><C-r>
-map <C-z> u
-imap <C-z> <Esc>u
+noremap <C-y> <C-r>
+inoremap <C-y> <Esc><C-r>
+noremap <C-z> u
+inoremap <C-z> <Esc>u
 " Tabs tabs tabs
 noremap <C-t> gt
 inoremap <C-t> <Esc>gti
@@ -145,8 +193,8 @@ noremap t7 7gt
 noremap t8 8gt
 noremap t9 9gt
 " Fugitive commands
-map ga <Esc>:Gstatus<CR>
-map gs <Esc>:Gstatus<CR>
-map gc <Esc>:Gcommit<CR>
-map gp <Esc>:Gpush<CR>
-map gr <Esc>:Gpull<CR>
+noremap ga <Esc>:Gstatus<CR>
+noremap gs <Esc>:Gstatus<CR>
+noremap gc <Esc>:Gcommit<CR>
+noremap gp <Esc>:Gpush<CR>
+noremap gr <Esc>:Gpull<CR>
