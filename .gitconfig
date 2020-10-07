@@ -9,7 +9,7 @@
 	email = gergely.daniel7@gmail.com
 [core]
 	editor = vim
-	filemode = true
+	filemode = false
 [merge]
 	tool = vimdiff
 [push]
