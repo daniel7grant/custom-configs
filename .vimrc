@@ -64,7 +64,9 @@ let g:coc_global_extensions = [
   \ 'coc-lua',
   \ 'coc-python',
   \ 'coc-java',
+  \ 'coc-rls',
   \ 'coc-eslint']
+let g:coc_disable_startup_warning = 1
 
 " NERDTREE SETTINGS
 let g:NERDTreeShowHidden = 1

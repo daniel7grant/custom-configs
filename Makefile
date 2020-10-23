@@ -14,5 +14,4 @@ bash-install:
 	if [[ -d private ]] ; then cp -ar $(privatefiles) ~ ; fi
 vim-install:
 	cp -ar $(vimfiles) ~ 
-	# if [[ ! -d  ~/.vim/bundle/vundle ]] ; then git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle ; fi
-	vim wakatime-key -c ":PlugInstall"
+	vim -c ":PlugInstall|:wqa!"
