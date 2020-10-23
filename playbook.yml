@@ -1,0 +1,25 @@
+- hosts: '{{ host | default(''none'') }}'
+  remote_user: grant
+  #  become: yes
+  #  become_method: sudo
+  tasks:
+  ## Uncomment for installs
+  # - name: Install default packages
+  #   dnf:
+  #     name: git, vim, make, bash-completion
+  #     state: present
+  - name: Clone configs repository
+    git:
+      repo: https://github.com/daniel7grant/custom-configs.git
+      dest: ~/custom-configs
+      version: bash
+    # become_user: grant
+  - name: Install dotfiles to their destinations
+    command:
+      cmd: make -C ~/custom-configs bash-install
+    # become_user: grant
+  - name: Install vim configurations
+    command:
+      cmd: make -C ~/custom-configs vim-install
+    # become_user: grant
+
