@@ -1,1 +1,5 @@
-private/
+/private
+
+# Editor files for global gitignore
+.idea/
+.vscode/

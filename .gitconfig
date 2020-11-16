@@ -9,7 +9,8 @@
 	email = gergely.daniel7@gmail.com
 [core]
 	editor = vim
-	filemode = false
+	fileMode = false
+	excludesfile = /home/grant/.gitignore
 [merge]
 	tool = vimdiff
 [push]
@@ -21,3 +22,5 @@
 	interactive = auto
 	ui = true
 	pager = true
+[pull]
+	rebase = false
