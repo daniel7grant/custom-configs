@@ -86,3 +86,10 @@ PATH=$PATH:$HOME/bin
 
 export PATH
 
+# Source local definitions
+if [ -d ~/.bash.d ]; then
+    for f in ~/.bash.d/*; do
+        . $f
+    done
+fi
+

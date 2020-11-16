@@ -1,4 +1,4 @@
-bashfiles = .config/ .ssh/ .bashrc .bash_logout .inputrc .gitconfig .gitattributes
+bashfiles = .config/ .ssh/ .bash.d/ .bashrc .bash_logout .inputrc .gitconfig .gitattributes
 privatefiles = private/.ssh/ 
 vimfiles = .vim/ .vimrc .vimrc_root
 
