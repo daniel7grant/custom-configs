@@ -88,7 +88,7 @@ export PATH
 
 # Source local definitions
 if [ -d ~/.bash.d ]; then
-    for f in ~/.bash.d/*; do
+	for f in $( ls ~/.bash.d/ ); do
         . $f
     done
 fi
