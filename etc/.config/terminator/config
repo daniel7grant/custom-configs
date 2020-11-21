@@ -9,7 +9,6 @@
   title_transmit_bg_color = "#222d32"
 [keybindings]
   switch_to_tab_1 = <Alt>1
-  switch_to_tab_10 = <Alt>0
   switch_to_tab_2 = <Alt>2
   switch_to_tab_3 = <Alt>3
   switch_to_tab_4 = <Alt>4
@@ -18,22 +17,29 @@
   switch_to_tab_7 = <Alt>7
   switch_to_tab_8 = <Alt>8
   switch_to_tab_9 = <Alt>9
+  switch_to_tab_10 = <Alt>0
+  group_all_toggle = <Primary><Shift>a
+  group_tab_toggle = <Primary><Shift>g
+[profiles]
+  [[default]]
+    background_color = "#29353b"                                <
+    cursor_color = "#aaaaaa"                                    <
+    foreground_color = "#a6adb0"                                <
+    font = Inconsolata 12
+    use_system_font = False
+    audible_bell = True
+    icon_bell = False
+    show_titlebar = False
+    scrollback_infinite = True
+    scrollback_lines = 10000000
+    copy_on_selection = True
 [layouts]
   [[default]]
     [[[child1]]]
       parent = window0
       type = Terminal
+      profile = default
     [[[window0]]]
       parent = ""
       type = Window
 [plugins]
-[profiles]
-  [[default]]
-    audible_bell = True
-    copy_on_selection = True
-    cursor_color = "#aaaaaa"
-    icon_bell = False
-    scrollback_infinite = True
-    scrollback_lines = 10000000
-    show_titlebar = False
-    use_theme_colors = True
