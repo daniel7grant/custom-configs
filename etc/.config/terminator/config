@@ -22,9 +22,9 @@
   group_tab_toggle = <Primary><Shift>g
 [profiles]
   [[default]]
-    background_color = "#29353b"                                <
-    cursor_color = "#aaaaaa"                                    <
-    foreground_color = "#a6adb0"                                <
+    background_color = "#29353b"
+    cursor_color = "#aaaaaa"
+    foreground_color = "#a6adb0"
     font = Inconsolata 12
     use_system_font = False
     audible_bell = True
