@@ -88,8 +88,8 @@ export PATH
 
 # Source local definitions
 if [ -d ~/.bash.d ]; then
-	for f in $( ls ~/.bash.d/ ); do
-        . $f
+	for f in $( ls --color=never ~/.bash.d/ ); do
+        . ~/.bash.d/$f
     done
 fi
 
