@@ -3,3 +3,8 @@
 # Editor files for global gitignore
 .idea/
 .vscode/
+
+# Create local files in projects to handle specific deployments
+Makefile.local
+docker-compose.local.yml
+

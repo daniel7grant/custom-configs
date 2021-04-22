@@ -53,6 +53,9 @@ alias watch='watch -n1'
 alias curl='curl -s'
 # Open is open
 alias open='xdg-open'
+# Local stuff
+alias localmake='make -f Makefile.local'
+alias local-compose='docker-compose -f docker-compose.local.yml'
 
 # Make stupid commands easier
 # Create tunnel via jumpserver
