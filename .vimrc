@@ -18,13 +18,11 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'Xuyuanp/nerdtree-git-plugin' 
 Plug 'ryanoasis/vim-devicons'
 Plug 'jistr/vim-nerdtree-tabs'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " AUTOCOMPLETE, LINT, FORMAT
 Plug 'mattn/emmet-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'w0rp/ale'
-Plug 'sheerun/vim-polyglot'
 Plug 'prettier/vim-prettier'
 " FILETYPES
 Plug 'chr4/nginx.vim'
