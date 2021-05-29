@@ -43,6 +43,7 @@ alias la='ls --color -hla'
 alias grep='grep --color=auto'
 alias jest='jest --color'
 alias hl='highlight -O xterm256 -s molokai'
+alias bat='bat -pp'
 # And tabs
 alias vim='vim -p'
 # And other kinda tabs
