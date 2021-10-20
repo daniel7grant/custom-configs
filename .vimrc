@@ -31,6 +31,7 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'nfnty/vim-nftables'
 Plug 'posva/vim-vue'
+Plug 'pearofducks/ansible-vim'
 
 call plug#end()
 
@@ -63,6 +64,8 @@ let g:coc_global_extensions = [
   \ 'coc-python',
   \ 'coc-java',
   \ 'coc-rls',
+  \ 'coc-rust-analyzer',
+  \ 'coc-yaml',
   \ 'coc-eslint']
 let g:coc_disable_startup_warning = 1
 
@@ -88,6 +91,9 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 autocmd Filetype yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" FILETYPES
+autocmd BufRead,BufNewFile */playbooks/*.yml set filetype=yaml.ansible
 
 " SET LINE NUMBERS (SWITCH-OFF: SET NONUMBER)
 set number
