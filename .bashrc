@@ -57,6 +57,7 @@ alias open='xdg-open'
 # Local stuff
 alias localmake='make -f Makefile.local'
 alias local-compose='docker-compose -f docker-compose.local.yml'
+alias dps='docker ps --format "table{{.ID}}\t{{.Names}}\t{{.Image}}\t{{.RunningFor}}\t{{.Status}}"'
 
 # Make stupid commands easier
 # Create tunnel via jumpserver
