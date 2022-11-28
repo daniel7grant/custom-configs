@@ -1,0 +1,46 @@
+[global_config]
+  focus = system
+  window_state = maximise
+  scroll_tabbar = True
+  title_transmit_bg_color = "#222d32"
+  title_inactive_fg_color = "#babdb6"
+  title_inactive_bg_color = "#29363c"
+  inactive_color_offset = 0.80487804878
+  suppress_multiple_term_dialog = True
+  always_split_with_profile = True
+[keybindings]
+  switch_to_tab_1 = <Alt>1
+  switch_to_tab_2 = <Alt>2
+  switch_to_tab_3 = <Alt>3
+  switch_to_tab_4 = <Alt>4
+  switch_to_tab_5 = <Alt>5
+  switch_to_tab_6 = <Alt>6
+  switch_to_tab_7 = <Alt>7
+  switch_to_tab_8 = <Alt>8
+  switch_to_tab_9 = <Alt>9
+  switch_to_tab_10 = <Alt>0
+  reset_clear = None
+  group_all_toggle = <Primary><Shift>a
+  group_tab_toggle = <Primary><Shift>g
+  edit_tab_title = None
+[profiles]
+  [[default]]
+    audible_bell = True
+    icon_bell = False
+    background_color = "#282e33"
+    cursor_color = "#aaaaaa"
+    foreground_color = "#a6adb0"
+    show_titlebar = False
+    scrollback_lines = 10000000
+    scrollback_infinite = True
+    copy_on_selection = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+      profile = default
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
