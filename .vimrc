@@ -63,7 +63,6 @@ let g:coc_global_extensions = [
   \ 'coc-lua',
   \ 'coc-python',
   \ 'coc-java',
-  \ 'coc-rls',
   \ 'coc-rust-analyzer',
   \ 'coc-yaml',
   \ 'coc-eslint']
