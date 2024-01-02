@@ -270,10 +270,6 @@
 		"command": "editor.action.indentationToTabs"
 	},
 	{
-		"key": "ctrl+alt+c",
-		"command": "notifications.clearAll"
-	},
-	{
 		"key": "ctrl+alt+d",
 		"command": "workbench.action.splitEditor"
 	},
@@ -294,5 +290,19 @@
 	{
 		"key": "ctrl+t",
 		"command": "extension.simpleSearch"
+	},
+	{
+		"key": "ctrl+alt+s",
+		"command": "git.sync"
+	},
+	{
+		"key": "ctrl+alt+c",
+		"command": "workbench.view.scm",
+		"when": "workbench.scm.active"
+	},
+	{
+		"key": "ctrl+shift+g",
+		"command": "-workbench.view.scm",
+		"when": "workbench.scm.active"
 	}
 ]
